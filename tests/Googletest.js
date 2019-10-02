@@ -1,6 +1,6 @@
 module.exports = {
   '@tags': ['google'],
-  '@disable': true,
+  '@disable': 'true',
   'Google Advance Search : Elon mask' (browser) {
     const mainquery = 'Elon Mask'
     const page = browser.page.googleAdvanceSearch()
@@ -19,7 +19,6 @@ module.exports = {
     browser
       .assert.urlContains('as_q=Elon+Mask', 'Param: Main Query is Elon Mask')
       .assert.urlContains('lr=lang_it', 'Param: Language is Italian')
-      .assert.urlContains('as_qdr=m', 'Param: Time Period is Last Month')
       .assert.urlContains('as_qdr=m', 'Param: Time Period is Last Month')
 
       .assert.visible(resultPageQuerySelector, 'UI : Elon Mask is in Query')
